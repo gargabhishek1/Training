@@ -5,9 +5,13 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksApi", "BooksApi\BooksApi.csproj", "{3CFC48B1-130C-4C87-B91C-7616DA0E550E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseProxy", "ReverseProxy\ReverseProxy.csproj", "{57D53515-5F12-4D34-AC4C-FAAF9EC85883}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReverseProxy", "ReverseProxy\ReverseProxy.csproj", "{57D53515-5F12-4D34-AC4C-FAAF9EC85883}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarApi", "CalendarApi\CalendarApi.csproj", "{CA1EAD05-8E7A-47B8-A699-B3AA27EFC525}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalendarApi", "CalendarApi\CalendarApi.csproj", "{CA1EAD05-8E7A-47B8-A699-B3AA27EFC525}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservationsApi", "ReservationsApi\ReservationsApi.csproj", "{E1C674EF-03C1-4D3A-BCBD-A079878F11D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservationProcessor", "ReservationProcessor\ReservationProcessor.csproj", "{143C7EBC-A98A-4DF3-8DD5-F6517B7F6274}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{CA1EAD05-8E7A-47B8-A699-B3AA27EFC525}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA1EAD05-8E7A-47B8-A699-B3AA27EFC525}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA1EAD05-8E7A-47B8-A699-B3AA27EFC525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C674EF-03C1-4D3A-BCBD-A079878F11D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C674EF-03C1-4D3A-BCBD-A079878F11D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C674EF-03C1-4D3A-BCBD-A079878F11D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C674EF-03C1-4D3A-BCBD-A079878F11D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143C7EBC-A98A-4DF3-8DD5-F6517B7F6274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143C7EBC-A98A-4DF3-8DD5-F6517B7F6274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143C7EBC-A98A-4DF3-8DD5-F6517B7F6274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143C7EBC-A98A-4DF3-8DD5-F6517B7F6274}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
