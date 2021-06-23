@@ -18,6 +18,8 @@ namespace ReservationProcessor
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddSingleton<KafkaReservations>();
+                    services.AddHttpClient<BooksLookupService>();
                     services.AddHostedService<Worker>();
                 });
     }
