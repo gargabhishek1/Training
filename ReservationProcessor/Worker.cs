@@ -1,4 +1,5 @@
 using Confluent.Kafka;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,10 +14,11 @@ namespace ReservationProcessor
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-
-        public Worker(ILogger<Worker> logger)
+        private readonly IConfiguration _config;
+        public Worker(ILogger<Worker> logger, IConfiguration config)
         {
             _logger = logger;
+            _config = config;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -24,13 +26,13 @@ namespace ReservationProcessor
 
             var config = new ConsumerConfig
             {
-                BootstrapServers = "localhost:9092",
-                GroupId = "ReservationProcessor",
+                BootstrapServers = _config["Kafka:BoostrapServers"],
+                GroupId = _config["Kafka:GroupId"],
                 AutoOffsetReset = AutoOffsetReset.Earliest
             };
 
             var consumer = new ConsumerBuilder<Ignore, string>(config).Build();
-            consumer.Subscribe("reservation-requests");
+            consumer.Subscribe(_config["Kafka:Topic"]);
             // reservation-reqeust => reservation-approved | reservation-denied
             while (!stoppingToken.IsCancellationRequested)
             {
